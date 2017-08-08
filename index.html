@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					<textarea data-template>
+						# Machine Learning in Javascript
+					</textarea>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+						## Things you can do
+						</textarea>
+					</section>
+					<section>
+						<h2>Cat recognition</h2>
+						<img src="img/kittydar.png" alt="Kittydar App">
+						<p>
+						Source:
+						<a href="https://harthur.github.io/kittydar/">https://harthur.github.io/kittydar/</a>
+						</p>
+					</section>
+					<section>
+						<h2>Digit recognition</h2>
+						<img src="img/digitdemo.png" alt="regl cnn">
+						<p>
+						Source:
+						<a href="https://erkaman.github.io/regl-cnn/src/demo.html">https://erkaman.github.io/regl-cnn/src/demo.html</a>
+						</p>			
+					</section>
+					<section>
+						<h3>Self-driving car simulations</h3>
+						<img src="img/deeptraffic.png" alt="Deep Traffic" width='600px' height='450px'>
+						<p>
+						Source:
+						<a href="http://selfdrivingcars.mit.edu/deeptrafficjs/">Deep Traffic</a>
+						<a href="http://selfdrivingcars.mit.edu/">MIT - 6.S094: Deep Learning for Self-driving cars</a>
+						</p>
+					</section>
+					<section>
+						<h3>Image manipulations</h3>
+						<img src="img/numjs.png" alt="NumJs jsfiddle" width='600px' height='450px'>
+						<p>
+						Source:
+						<a href="https://jsfiddle.net/nicolaspanel/047gwg0q/">NumJs Demo</a>
+						</p>
+					</section>
+					<section>
+						<h3>Automatic logo generator</h3>
+						<img src="img/logo-generator.png" alt="markmaker" width='600px' height='450px'>
+						<p>
+						Source:
+						<a href="https://emblemmatic.org/markmaker/#/">MarkMaker</a>
+						</p>
+					</section>
+					<section>
+						<h3>Natural Language processing</h3>
+						<img src="img/nlp.png" alt="Text processing" width='600px' height='450px'>
+						<p>
+						Source:
+						<a href="https://www.codeschool.com/blog/2016/06/08/machine-learning-filtering-email-for-spam-or-ham/">Code School Machine Learning blog</a>
+						</p>
+					</section>
+					<section>
+						<h3>AI for Robots</h3>
+						<img src="img/botbrain.png" alt="Bot brain" width='600px' height='450px'>
+						<p>
+						Source:
+						<a href="https://github.com/sdesalas/botbrain">Bot brain</a>
+						</p>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						## Key concepts
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						### Supervised
+
+						Given input variables 'X' and an output variable 'Y', learn the mapping function from the input to the output
+
+						Y = f(X)
+
+						- Classification: when the output is a category "red", "blue" or "spam", "not spam"
+						- Regression: when the output variable is a real value "dollars", "weights"
+
+						Examples: Linear regression, Support Vector Machines, Random Forest
+						</textarea>					
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						### Unsupervised
+
+						- Clustering: when you want to discover the inherent groupings in the data 
+						- Association: when you want to discover rules that describe large portions of the data
+
+						Examples: k-means 
+						</textarea>					
+					</section>
+					<section>
+						<h3>Neural Network</h3>
+						<img src="img/network.png" alt="Neural Network" width='600px' height='450px'>
+					</section>
+					<section>
+						<h3>Different way to look at it</h3>
+						<img style="background-color: white" src="img/representation.png" alt="Table view" width='600px' height='450px'>
+					</section>
+					<section>
+						<h3>Perceptron</h3>
+						<img src="https://cdn-images-1.medium.com/max/800/1*K_-erXb47r6CeoJU61Yg6w.png" alt="perceptron" width='400px' height='275px'>
+					</section>
+					<section>
+						<h3>Forward vs Backpropagation</h3>
+						<img src="https://cdn-images-1.medium.com/max/1600/0*Yk-ojFKLuPhZEHoU." alt="Forward" width='700px' height='133px'>
+						<img src="https://cdn-images-1.medium.com/max/1600/0*k93UNqZ5FeScIVME." alt="Backprop" width='700px' height='133px'>
+						<p>Source:
+							<a href="https://ayearofai.com/rohan-lenny-1-neural-networks-the-backpropagation-algorithm-explained-abf4609d4f9d">Rohan & Lenny #1: Neural Networks & The Backpropagation, Explained</a>
+						</p>
+					</section>
+					<section>
+						<h3>Activation functions</h3>
+						<img src="img/activations.png" alt="Activation functions" width='600px' height='600px'>
+						<p>Source:
+							<a href="https://wagenaartje.github.io/neataptic/">Neataptic</a>
+						</p>
+					</section>
+					<section>
+						<h3>Cost functions</h3>
+						<img src="img/cost.png" alt="Loss functions" width='700px' height='450px'>
+						<p>Source:
+							<a href="https://wagenaartje.github.io/neataptic/">Neataptic</a>
+						</p>
+
+					</section>
+<!-- 					<section>
+						<h3>Gradient descent</h3>
+						<div>Algo to find minimum of Cost function</div>
+						<img src="img/cost.png" alt="Minimize functions" width='700px' height='450px'>
+					</section>
+ -->
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## CPU vs GPU
+						</textarea>					
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### CPU
+
+							#### Array of Arrays [NumericJs](http://www.numericjs.com/)
+
+							<pre>var A = [[1, 0, 0],
+									[0, 1, 0],
+									[0, 0, 1]]</pre>
+							<pre>var x = A[i][j]</pre>
+
+							#### Typed Arrays [Brain.Js](https://github.com/harthur-org/brain.js)
+							<pre>var A = new FloatArray([1, 0, 0, 0, 1, 0, 0, 0, 1])</pre>
+							<pre>var x = A[3 * i + j]</pre>
+
+							#### Strided Arrays
+							Write the index of an element in an array as a general linear function of its coordinate
+							<pre>var x = A[c0 * i + c1 * j + ...]</pre>
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							#### [NdArrays](https://github.com/mikolalysenko/ndarray)
+							An ndarray is an object that has 4 pieces of data:
+							- data - underlying typed array
+							- shape - shape of the ndarray
+							- stride - stride of the ndarray
+							- offset - pointer to the first element of the array
+
+							<pre>data[stride[0] * i[0] + stride[1] * i[1] + ... + offset]</pre>					
+
+							- Used by [NumJs](https://www.npmjs.com/package/numjs), [Keras.js](https://github.com/transcranial/keras-js), [Tensorfire](https://www.npmjs.com/package/tensorfire), [Deeplearn.js](https://pair-code.github.io/deeplearnjs/index.html) and lot of others
+							- [ndarray for Matlab users](https://github.com/scijs/scijs-ndarray-for-matlab-users) Lots of equivalent functions 
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### CPU - Continued 2
+
+							#### WebAssembly
+
+							- [Stdlib](https://www.npmjs.com/package/@stdlib/stdlib) Standard library for Javascript and NodeJs
+							- [WebDNN](https://mil-tokyo.github.io/webdnn) Inference only
+
+							#### Service Workers
+							- There is a cost to pass the data to go back and forth
+							- Lack of `<canvas>` and thus WebGL access so CPU-mode only
+
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### GPU - WebGL
+
+							- [Weblas](https://github.com/waylonflinn/weblas) GPU accelerated Javascript, numerical
+							computing in the browser => Currently fastest in WebGL! [Benchmark](https://github.com/waylonflinn/weblas/wiki)
+							- [turbo.js](https://turbo.github.io/) WebGL with CPU fallback- Fairly recent, fairly complex to use
+							- [gpu.js](gpu.rocks) GPU accelerated Javascript - Fairly recent, no NN example yet
+							- [Tensorfire](https://tenso.rs/demos/fast-neural-style/) - Very recent library, no Github currently, found an [NPM](https://www.npmjs.com/package/tensorfire) library
+							- [Deeplearn.js](https://pair-code.github.io/deeplearnjs/index.html) Newest!! library from members of Google brain
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+
+							#### WebCl
+
+							[Sushi2](https://github.com/mil-tokyo/sushi2) Using [node-opencl](https://github.com/mikeseven/node-opencl) or [Nokia WebCl extension for Firefox](https://github.com/toaarnio/webcl-firefox)
+
+							#### WebGPU
+							[WebDNN](https://mil-tokyo.github.io/webdnn/) Works only on Safari, defaults to WebAssembly in other browsers
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+						## Resources							
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Resources - JS specific
+
+							[Machine learning](https://www.burakkanber.com/blog/machine-learning-in-other-languages-introduction/) old blog by Burak Kanber on:
+							- k-nearest-neighbour
+							- k-means clustering
+							- Genetic algorithms
+							- Naive Bayes Classifier
+							- Sentiment Analysis
+							- Full-text Search
+
+							[Hackers guide to Neural Networks](http://karpathy.github.io/neuralnets/) by Andrej Karpathy
+
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Resources - JS specific
+
+							- [Brain.js](https://github.com/harthur-org/brain.js) Neural Networks in Javascript - Might get an update with GPU.js
+							- [DN2A](https://github.https://www.npmjs.com/package/numjscom/dn2a/dn2a-javascript) Digital Neural Networks Architecture
+							- [ConvnetJs](https://github.com/karpathy/convnetjs) Neural Networks - CNN - Reinforcement Learning (not maintained)
+							- [Tensorflow playground](http://playground.tensorflow.org) Typescript version of simplified Google library
+							- [SynapticJs](http://caza.la/synaptic/) Architecture Free Neural Network
+							- [NeatapticJs](https://wagenaartje.github.io/neataptic/) Synaptic + Neuro-Evolution
+							- [DeeplearnJs](https://pair-code.github.io/deeplearnjs/index.html) Deep learning in the browser from Google brain
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						### Resources - JS libraries from Universities
+
+						- Machine Intelligence Laboratory (The University of Tokyo)
+						[MILJS](https://mil-tokyo.github.io/miljs.html) On the technical edge but not user friendly
+
+						- Ecole Polytechnique Federale de Lausanne - Cheminfo
+						[mljs](https://github.com/mljs/ml) Machine Learning tools in Javascript - Exhaustive number of statistical libraries
+
+						- Universite de Lorraine - LORIA
+						[MLWeb](https://github.com/lauerfab/MLweb) ML and scientific computing (linear algebra, statistics, optimization) javascript libraries, with an [online lab](http://mlweb.loria.fr/lalolab/index.html)
+
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Courses - not JS specific
+
+							#### Coursera
+
+							Andrew Ng - [Machine Learning](https://www.coursera.org/learn/machine-learning) - Stanford
+
+							Geoffrey Hinton - [Neural Networks for ML](https://www.coursera.org/learn/neural-networks) - U. of Toronto
+
+							#### Udacity - Nanodegrees
+
+							- [Deep Learning Foundations](https://www.udacity.com/course/deep-learning-nanodegree-foundation--nd101)
+							- [Machine Learning Engineer](https://www.udacity.com/degrees/machine-learning-engineer-nanodegree--nd009)
+							- [Artificial Intelligence](https://www.udacity.com/ai)
+							- [Self-Driving Car Engineer](https://www.udacity.com/drive)
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Blogs/Tutorials/Newsletters
+
+							[ML for Software Engineers](https://github.com/ZuzooVn/machine-learning-for-software-engineers) Huge Github Repo
+
+							[Analytics Vidhya](https://www.analyticsvidhya.com) Great source of tutorials for ML in Python, R etc..
+							
+							[Exploring LSTM](http://blog.echen.me/2017/05/30/exploring-lstms) Nice Tutorial on LSTM
+
+							[WildML](http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/) with associated [Jupyter notebook](https://github.com/dennybritz/nn-from-scratch/blob/master/nn-from-scratch.ipynb)
+
+							[DataScience Weekly](datascienceweekly.org)
+						</textarea>
+					</section>					
+				</section>
+				<section data-markdown>
+					### Get involved
+
+					- [AI Grant](https://aigrant.org/) Get $2,500 for your AI project
+					- [Kaggle](http://kaggle.com) Machine Learning Competitions - Datasets - Kernels
+				</section>
+			</div>
+		</div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
